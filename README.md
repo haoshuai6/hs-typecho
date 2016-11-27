@@ -1,0 +1,2 @@
+# hs-typecho
+hs-typecho
