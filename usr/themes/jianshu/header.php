@@ -72,7 +72,7 @@
 		<a class="logo<?php if($this->is('index')): ?> active<?php endif; ?>" role="button" data-original-title="个人主页" data-container="div.expanded" href="<?php $this->options->siteUrl(); ?>"> <b> <?php if($this->options->logoText){$this->options->logoText();}else{echo mb_substr($this->options->title,0,1,'utf-8');} ?></b> <i class="fa fa-home"> </i> <span class="title"> <?php _e('首页 '); ?> </span> </a>
         <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
         <?php while($categorys->next()): ?>
-           <a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?> href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"> <span class="title"> <?php $categorys->name(); ?> </span> </a>
+           <a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?> href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><span class="title"> <?php $categorys->name(); ?> </span> </a>
         <?php endwhile; ?>
 	</div>
 </div>
