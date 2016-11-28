@@ -70,21 +70,14 @@
 <div class="navbar navbar-jianshu"> 
 	<div class="dropdown"> 
 		<a class="logo<?php if($this->is('index')): ?> active<?php endif; ?>" role="button" data-original-title="个人主页" data-container="div.expanded" href="<?php $this->options->siteUrl(); ?>"> <b> <?php if($this->options->logoText){$this->options->logoText();}else{echo mb_substr($this->options->title,0,1,'utf-8');} ?></b> <i class="fa fa-home"> </i> <span class="title"> <?php _e('首页 '); ?> </span> </a>
-		<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-        <?php while($pages->next()): ?>
-        <a<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><i class="fa fa-<?php $pages->slug(); ?>"> </i> <span class="title"> <?php $pages->title(); ?> </span> </a>
-        <?php endwhile; ?> 
-	</div> 
+        <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
+        <?php while($categorys->next()): ?>
+           <a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?> href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"> <span class="title"> <?php $categorys->name(); ?> </span> </a>
+        <?php endwhile; ?>
+	</div>
 </div>
 <div class="wrapper">
-<!--<div class="sidebar" style="display: none">
-     <div class="cover-img" style="background-image: url(<?php /*if ($this->options->bgPhoto){$photo = explode(',',$this->options->bgPhoto);echo $photo[array_rand($photo,1)];}else{$this->options->themeUrl('img/header_'.rand(0,31).'.jpg');}*/?>)"></div>
-    <div class="bottom-block">
-       <img class="avatar-img" src=" <?php /*if ($this->options->avatarUrl): */?><?php /*$this->options->avatarUrl() */?><?php /*else: */?><?php /*$this->options->themeUrl('img/avatar.png'); */?><?php /*endif; */?>" ></img>
-      <h1><?php /*$this->options->title(); */?></h1>
-      <p><?php /*$this->options->description(); */?></p>
-    </div>
-</div>-->
+
 <div class="main">
     <div class="page-title clearfix"> 
       <ul class="navigation clearfix"> 
