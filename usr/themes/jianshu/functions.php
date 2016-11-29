@@ -223,7 +223,8 @@ function threadedComments($comments, $options){
         </div>
         <div class="comment-meta-time">
         <a href="<?php $comments->permalink(); ?>"><time itemprop="commentTime" datetime="<?php $comments->date('c'); ?>"><?php $options->beforeDate();
-        $comments->date($options->dateFormat);
+         /*$comments->date($options->dateFormat);*/
+         $comments->date('Y-m-d H:i:s');
         $options->afterDate(); ?></time></a>
         </div>
         <?php if ('waiting' == $comments->status) { ?>

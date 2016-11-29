@@ -33,6 +33,8 @@
 	   <a href="#" class="bds_print" data-cmd="print" title="分享到打印"></a>
 	   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
 	 </div>
+
+		
         <div class="post-footer">
 	    <section class="author">
 	      <div class="author-ava"><img src="<?php if ($this->options->gravatar): ?><?php $this->options->gravatar() ?><?php else: ?><?php $this->options->themeUrl('img/avatar.png'); ?><?php endif; ?>" >

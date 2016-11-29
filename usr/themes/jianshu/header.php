@@ -17,17 +17,22 @@
 	
     <script>
      window._bd_share_config = {
-      "common": {
-        "bdSnsKey": {},
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": "",
-        "bdStyle": "0",
-        "bdSize": "16"
-      },
-      "share": {}
-    };
+         "common": {
+             "bdSnsKey": {},
+             "bdText": "",
+             "bdMini": "2",
+             "bdMiniList": false,
+             "bdPic": "",
+             "bdStyle": "1",
+             "bdSize": "24"
+         },
+         "share": {},
+         "image": {
+             "viewList": ["tsina", "weixin", "qzone", "tqq", "renren", "tieba"],
+             "viewText": "分享到：",
+             "viewSize": "16"
+         }
+     };
     with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =  'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~ ( - new Date() / 36e5)];
     </script>
 
@@ -47,10 +52,10 @@
 	<div class="dropdown"> 
 		<a class="dropdown-toggle logo" data-target="#nav-menu" href="#"><?php if($this->options->logoText){$this->options->logoText();}else{echo mb_substr($this->options->title,0,1,'utf-8');} ?></a> 
 		<ul class="dropdown-menu" id="nav-menu"> 
-			<li><a href="<?php $this->options->siteUrl(); ?>"><i class="fa fa-home"></i><?php _e('首页 '); ?></a></li> 
-		    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-            <?php while($pages->next()): ?>
-            <li><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><i class="fa fa-<?php $pages->slug(); ?>"> </i> <?php $pages->title(); ?></a></li>
+			<li><a href="<?php $this->options->siteUrl(); ?>"><i class="fa fa-home"></i><?php _e('首页 '); ?></a></li>
+            <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
+            <?php while($categorys->next()): ?>
+            <li><a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?> href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><span class="title"> <?php $categorys->name(); ?> </span> </a></li>
             <?php endwhile; ?>
 		</ul> 
 	</div> 
@@ -69,10 +74,14 @@
 </div> 
 <div class="navbar navbar-jianshu"> 
 	<div class="dropdown"> 
-		<a class="logo<?php if($this->is('index')): ?> active<?php endif; ?>" role="button" data-original-title="个人主页" data-container="div.expanded" href="<?php $this->options->siteUrl(); ?>"> <b> <?php if($this->options->logoText){$this->options->logoText();}else{echo mb_substr($this->options->title,0,1,'utf-8');} ?></b> <i class="fa fa-home"> </i> <span class="title"> <?php _e('首页 '); ?> </span> </a>
+		<a class="logo<?php if($this->is('index')): ?> active<?php endif; ?>" role="button" data-original-title="首页" data-container="div.expanded" href="<?php $this->options->siteUrl(); ?>">
+            <b> <?php if($this->options->logoText){$this->options->logoText();}else{echo mb_substr($this->options->title,0,1,'utf-8');} ?></b>
+            <i class="fa fa-home"> </i> <span class="title"> <?php _e('首页'); ?>
+            </span>
+        </a>
         <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
         <?php while($categorys->next()): ?>
-           <a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?> href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><span class="title"> <?php $categorys->name(); ?> </span> </a>
+           <a <?php if($this->is('category', $categorys->slug)): ?> class="active"<?php endif; ?>  href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><span class="title"> <?php $categorys->name(); ?> </span> </a>
         <?php endwhile; ?>
 	</div>
 </div>

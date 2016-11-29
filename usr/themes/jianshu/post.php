@@ -6,7 +6,7 @@
         <ul class="post-meta clearfix">
             <li itemprop="author" itemscope itemtype="http://schema.org/Person"><?php _e('<i class="fa fa-user"></i>'); ?> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
             <li><?php _e('<i class="fa fa-book"></i>'); ?> <?php $this->category(','); ?></li>
-            <li><?php _e('<i class="fa fa-clock-o"></i>'); ?> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d'); ?></time></li>
+            <li><?php _e('<i class="fa fa-clock-o"></i>'); ?> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s'); ?></time></li>
             <li><?php _e('<i class="fa fa-eye"></i> 阅读 '); ?><?php $this->viewsNum(); ?></li>
 	    <li itemprop="interactionCount"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#<?php $this->respondId(); ?>"><?php $this->commentsNum('<i class="fa fa-comments-o"></i> 评论 %d'); ?></a></li>
             <li class="post-qrcode"><i class="fa fa-qrcode"></i>
