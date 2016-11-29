@@ -1,5 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div id="comments">
+    <?php Smilies_Plugin::output(); ?>
+
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
 	<p>
@@ -39,11 +41,12 @@
             <?php endif; ?>
     		<p>
                 <label for="textarea" class="required"><?php _e('内容'); ?></label>
-                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea rows="8" cols="50" name="text" id="comment" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
     		<p class="alignright">
                 <button type="submit" class="submit btn s3"><?php _e('提交评论'); ?></button>
             </p>
+
     	</form>
     </div>
     <?php else: ?>
