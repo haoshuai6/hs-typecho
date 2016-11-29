@@ -1,6 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     </div>
 </div>
+
 <footer> 
    <div class="footer-inner"> 
     <p>

@@ -18,7 +18,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		<?php if(!empty($this->options->listStyle) && in_array('thumb',$this->options->listStyle)): ?>
 		  <?php showThumb($this);?>
 		<?php endif; ?>
-		<h2 class="post-title" itemprop="name headline"><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+		<h2 class="post-title" itemprop="name headline"><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->sticky();$this->title() ?></a></h2>
 		<ul class="post-meta">
 		    <li itemprop="author" itemscope itemtype="http://schema.org/Person"><?php _e('<i class="fa fa-user"></i>'); ?> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
 		    <li><?php _e('<i class="fa fa-book"></i> '); ?><?php $this->category(','); ?></li>
