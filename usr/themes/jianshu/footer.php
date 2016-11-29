@@ -36,8 +36,8 @@ $(function(){
 	     prettyPrint();
 	});
 	var qrcode = new QRCode(document.getElementById("qrcode-img"), {
-        width : 96,//设置宽高
-        height : 96
+        width : 120,//设置宽高
+        height : 120
     });
 	qrcode.makeCode("<?php $this->permalink();?>");
 })
