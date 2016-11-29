@@ -17,11 +17,11 @@ function themeConfig($form) {
     $css = new Typecho_Widget_Helper_Form_Element_Radio('css',
     array(
     'default' => _t('默认风格'),
-    'red' => _t('红色风格'),
+   /* 'red' => _t('红色风格'),
     'green' => _t('绿色风格'),
     'blue' => _t('蓝色风格'),
     'purple' => _t('紫色风格'),
-    'black' => _t('黑色风格')
+    'black' => _t('黑色风格')*/
     ),
     'default',
     _t('配色选择'));
