@@ -394,7 +394,19 @@ class Widget_Abstract_Comments extends Widget_Abstract
             
             $this->pluginHandle(__CLASS__)->trigger($plugged)->gravatar($size, $rating, $default, $this);
             if (!$plugged) {
-                $url = Typecho_Common::gravatarUrl($this->mail, $size, $rating, $default, $this->request->isSecure());
+                //$url = Typecho_Common::gravatarUrl($this->mail, $size, $rating, $default, $this->request->isSecure());
+                $mailHash = NULL;
+                if (!empty($this->mail)) {
+                    $mailHash = md5(strtolower($this->mail));
+                }
+                //$url = 'https://secure.gravatar.com/avatar/';
+                $url = 'https://cdn.v2ex.com/gravatar/';
+                if (!empty($this->mail)){
+                    $url .= $mailHash;
+                }
+                $url .= '?s=' . $size;
+                $url .= '&r=' . $rating;
+                $url .= '&d=' . $default;
                 echo '<img class="avatar" src="' . $url . '" alt="' .
                 $this->author . '" width="' . $size . '" height="' . $size . '" />';
             }
