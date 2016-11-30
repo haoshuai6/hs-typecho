@@ -1,6 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div id="comments">
-    <?php Smilies_Plugin::output(); ?>
 
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>

@@ -148,7 +148,7 @@ class JustArchives_Plugin implements Typecho_Plugin_Interface
 
 	<!-- Just Archives | http://typecho.jkey.lu/ -->
 	<style type="text/css">.car-collapse .car-yearmonth { cursor: s-resize; } </style>
-	<script type='text/javascript' src='<?php echo $options->siteUrl; ?>/usr/plugins/JustArchives/js/jquery-1.4.3.min.js'></script> 
+	<script type='text/javascript' src='<?php echo $options->siteUrl; ?>usr/plugins/JustArchives/js/jquery-1.8.2.min.js'></script>
 	
 	<script type="text/javascript">
 		/* <![CDATA[ */
