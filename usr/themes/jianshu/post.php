@@ -31,7 +31,6 @@
         <p></p>
 		<?php Digg_Plugin::output(); ?>
         <div class="bdsharebuttonbox">
-	   <a href="#" class="bds_more" data-cmd="more"></a>
 	   <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
 	   <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
 	   <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
@@ -42,7 +41,9 @@
 	   <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 	   <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
 	   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-	 </div>
+	   <a href="#" class="bds_more" data-cmd="more"></a>
+
+		</div>
         <div class="post-footer">
 	    <section class="author">
 	      <div class="author-ava"><img src="<?php if ($this->options->gravatar): ?><?php $this->options->gravatar() ?><?php else: ?><?php $this->options->themeUrl('img/avatar.png'); ?><?php endif; ?>" >
@@ -51,7 +52,6 @@
 	      <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
 	    </section>
         </div>
-		<div class="github-widget-user" data-user="haoshuai6"></div>
     </article>
     <ul class="post-near">
         <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>

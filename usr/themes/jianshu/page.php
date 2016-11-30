@@ -20,7 +20,6 @@
 		</div>
         <p></p>
         <div class="bdsharebuttonbox">
-		   <a href="#" class="bds_more" data-cmd="more"></a>
 		   <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
 		   <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
 		   <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
@@ -31,6 +30,7 @@
 		   <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 		   <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
 		   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+		   <a href="#" class="bds_more" data-cmd="more"></a>
 	    </div>
 
 		

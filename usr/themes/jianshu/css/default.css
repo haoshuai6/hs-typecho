@@ -844,7 +844,7 @@ body {
 .post-content a img,.comment-content a img {
 	background:#FFF;
 	position:relative;
-	bottom:-4px;
+	/*bottom:-4px;*//*20161130edit*/
 }
 .post-content hr,.comment-content hr {
 	margin:2em auto;
@@ -913,7 +913,7 @@ body {
 .post-donate{
 	position:relative;
 	padding: 10px 20px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	background-color: #F5F5F5;
 	border-left: 4px solid #F57E42;
 	box-sizing: border-box;
@@ -1268,6 +1268,14 @@ footer a {
 }
 	.navbar-user {
 		right: 15px;
+	}
+}
+@media (max-width:615px) {
+	.search {
+		display: none;
+	}
+	.search_top {
+		display: inline-block;
 	}
 }
 /* footer */

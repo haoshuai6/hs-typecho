@@ -70,8 +70,7 @@
 	   <?php endif; ?>
 	<a class="login" href="<?php $this->options->adminUrl('login.php'); ?>"> <i class="fa fa-sign-in"> </i> <?php _e('登录'); ?> </a> 
 	<?php endif; ?>
-	<a class="set-view-mode pull-right" data-mode="day" href="javascript:void(0)"> <i class="fa fa-moon-o"> </i> </a> 
-</div> 
+</div>
 <div class="navbar navbar-jianshu"> 
 	<div class="dropdown"> 
 		<a class="logo<?php if($this->is('index')): ?> active<?php endif; ?>" role="button" data-original-title="首页" data-container="div.expanded" href="<?php $this->options->siteUrl(); ?>">
@@ -93,7 +92,13 @@
        <li><a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a> &raquo;</li>
         <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
     		<li class="active"><a href="javascript:;"><?php _e('最近更新'); ?></a></li>
-    	<?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+              <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+
+              <?php while($pages->next()): ?>
+                  <li>  | <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a> </li>
+              <?php endwhile; ?>
+                  <li>  | <a href='http://hsblogs.com' target='_blank' >旧版博客</a> </li>
+          <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
     		<li class="active"><?php $this->category(); ?></li>
     	<?php else: ?><!-- 页面为其他页时 -->
     		<li class="active"><a href="javascript:;"><?php $this->archiveTitle(' &raquo; ','',''); ?></a></li>
