@@ -70,6 +70,12 @@
 	   <?php endif; ?>
 	<a class="login" href="<?php $this->options->adminUrl('login.php'); ?>"> <i class="fa fa-sign-in"> </i> <?php _e('登录'); ?> </a> 
 	<?php endif; ?>
+    <li class="search_top">
+        <form class="search-form-top" method="post" action="./" role="search">
+            <input type="text" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" autocomplete="off"/>
+            <button type="submit" class="btn s3"><i class="fa fa-search"></i></button>
+        </form>
+    </li>
 </div>
 <div class="navbar navbar-jianshu"> 
 	<div class="dropdown"> 
