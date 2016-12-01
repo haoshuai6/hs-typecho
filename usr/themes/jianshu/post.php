@@ -1,5 +1,55 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
+<style>
+	.gh-btn {
+		padding: 2px 5px 2px 4px;
+		color: #333;
+		text-decoration: none;
+		text-shadow: 0 1px 0 #fff;
+		white-space: nowrap;
+		cursor: pointer;
+		border-radius: 3px;
+		display: inline-block;
+		width: 220px;
+		margin: 0 auto;
+		background-color: #e6e6e6;
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#eaeaea));
+		background-image: -webkit-linear-gradient(#fafafa,#eaeaea);
+		background-image: -moz-linear-gradient(top,#fafafa,#eaeaea);
+		background-image: -ms-linear-gradient(#fafafa,#eaeaea);
+		background-image: -o-linear-gradient(#fafafa,#eaeaea);
+		background-image: linear-gradient(#fafafa,#eaeaea);
+		background-repeat: no-repeat;
+		border: 1px solid #d4d4d4;
+		border-bottom-color: #bcbcbc
+	}
+	.gh-btn:hover,.gh-btn:focus,.gh-btn:active {
+		color: #fff;
+		text-decoration: none;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		border-color: #518cc6 #518cc6 #2a65a0;
+		background-color: #3072b3
+	}
+	.gh-btn:hover,.gh-btn:focus {
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#599bdc),to(#3072b3));
+		background-image: -webkit-linear-gradient(#599bdc,#3072b3);
+		background-image: -moz-linear-gradient(top,#599bdc,#3072b3);
+		background-image: -ms-linear-gradient(#599bdc,#3072b3);
+		background-image: -o-linear-gradient(#599bdc,#3072b3);
+		background-image: linear-gradient(#599bdc,#3072b3)
+	}
+	.gh-btn:active {
+		background-image: none;
+		-webkit-box-shadow: inset 0 2px 5px rgba(0,0,0,.1);
+		-moz-box-shadow: inset 0 2px 5px rgba(0,0,0,.1);
+		box-shadow: inset 0 2px 5px rgba(0,0,0,.1)
+	}
+	.git-text{
+		font-size: 20px;
+		zoom: 1;
+	}
+
+</style>
 <div class="main-container">
     <article class="post preview" itemscope itemtype="http://schema.org/BlogPosting">
         <h1 class="post-title" itemprop="name headline"><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
@@ -50,9 +100,15 @@
 	      </div>
 	      <p><?php $this->options->tips(); ?></p>
 	      <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
+
+		  <a class="gh-btn" id="gh-btn" href="https://github.com/haoshuai6" target="_blank">
+			<i class="fa fa-github fa-2x"></i> <span class="git-text">关注作者 @haoshuai6</span>
+		  </a>
+			
 	    </section>
         </div>
     </article>
+	<?php Like_Plugin::theLike(); ?>
     <ul class="post-near">
         <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
         <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
