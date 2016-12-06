@@ -142,7 +142,7 @@ class Smilies_Plugin implements Typecho_Plugin_Interface
 			':shock:'	=> 'icon_eek.gif',
 			':???:'		=> 'icon_confused.gif',
 			':cool:'	=> 'icon_cool.gif',
-			':lol:'		=> 'icon_lol.gif',
+
 			':mad:'		=> 'icon_mad.gif',
 			':twisted:' => 'icon_twisted.gif',
 			':roll:'	=> 'icon_rolleyes.gif',
