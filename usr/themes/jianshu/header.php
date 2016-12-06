@@ -14,7 +14,7 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/' . $this->options->css . '.css'); ?>">
-	
+	<link rel="icon" href="<?php $this->options->themeUrl('img/favicon.ico'); ?>">
     <script>
      window._bd_share_config = {
          "common": {
