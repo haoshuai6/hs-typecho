@@ -10,7 +10,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <article class="post preview" itemscope itemtype="http://schema.org/BlogPosting">
         <h1 class="post-title" itemprop="name headline"><?php $this->title() ?></h1>
         <div class="post-content" itemprop="articleBody">
-            <?php 
+            <?php
                 $stat = Typecho_Widget::widget('Widget_Stat');
                 Typecho_Widget::widget('Widget_Contents_Post_Recent', 'pageSize='.$stat->publishedPostsNum)->to($archives);
                 $year=0; $mon=0; $i=0; $j=0;
