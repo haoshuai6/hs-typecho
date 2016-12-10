@@ -9,6 +9,9 @@
 	<meta name="360-site-verification" content="7a9556fe06204362f67c6791facd9621" />
 	<meta name="baidu-site-verification" content="kGsg9PesK9" />
 	<meta name="google-site-verification" content="CwF3VU_YzAcp-pfsVJF9NXdcSK8CZSNYdUJKMDjstFQ" />
+	<meta name="keywords" content="php javascript css html nginx bug 积累 wechat 博客 lnmp hsblogs 学习"/>
+    <meta name="description" content="HSBLOG博客，欢迎您的光临！初衷：便于积累，在工作，学习中得到的经验，bug等。"/>
+    <meta name="author" content="https://hsblogs.com"/>
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),

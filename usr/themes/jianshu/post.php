@@ -67,19 +67,23 @@
             <?php parseContent($this); ?>
         </div>
 		<div class="post-donate">
-			<p><i class="fa fa-rmb"></i> 打赏几块钱，让服务器君跑的更快些，谢谢大家！<button class="btn s2 fr" onclick="$('#alipay-form').submit();"><i class="fa fa-cny"> <?php _e('打赏支持');?></i></button></p>
+			<p> 本博客，采用 <a href="https://creativecommons.org/licenses/by/3.0/cn/" target="_blank" style="font-weight:bold;">&lt;知识共享署名 3.0 中国大陆许可协议&gt;</a> 进行许可。
+				可自由转载、引用，但需署名作者且注明文章出处。
+			</p>
+			<p><i class="fa fa-rmb"></i> 打赏几块钱，让服务器君跑的更快些，谢谢大家！</p>
 			<div class="post-donate-img">
 				<p>支付宝二维码</p>
 				<img src="<?php $this->options->themeUrl('img/alipay.png'); ?>">
 			</div>
-			<form id="alipay-form" action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK">
-				<input type="hidden" name="optEmail" value="<?php $this->options->alipayAccount();?>">
-				<input type="hidden" name="payAmount" value="<?php $this->options->alipayAmount();?>">
-				<input type="hidden" name="title" value="<?php _e('打赏：');$this->title();?>">
-			</form>
+			<!--<form id="alipay-form" action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK">
+				<input type="hidden" name="optEmail" value="<?php /*$this->options->alipayAccount();*/?>">
+				<input type="hidden" name="payAmount" value="<?php /*$this->options->alipayAmount();*/?>">
+				<input type="hidden" name="title" value="<?php /*_e('打赏：');$this->title();*/?>">
+			</form>-->
 		</div>
         <p></p>
 	<div class="bdsharebuttonbox">
+	   <a href="#" class="bds_more" data-cmd="more"></a>
 	   <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
 	   <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
 	   <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
@@ -90,7 +94,7 @@
 	   <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 	   <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
 	   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-	   <a href="#" class="bds_more" data-cmd="more"></a>
+
 
 		</div>
         <div class="post-footer">
