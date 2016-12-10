@@ -6,17 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="360-site-verification" content="7a9556fe06204362f67c6791facd9621" />
-	<meta name="baidu-site-verification" content="kGsg9PesK9" />
-	<meta name="google-site-verification" content="CwF3VU_YzAcp-pfsVJF9NXdcSK8CZSNYdUJKMDjstFQ" />
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
-    <link href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/default.css'); ?>">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/' . $this->options->css . '.css'); ?>">
 	<link rel="icon" href="<?php $this->options->themeUrl('img/favicon.ico'); ?>">
     <script>
      window._bd_share_config = {
@@ -36,14 +33,14 @@
              "viewSize": "16"
          }
      };
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src ='/static/api/js/share.js?v=89860593.js?cdnversion=' + ~ ( - new Date() / 36e5)];
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src ='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~ ( - new Date() / 36e5)];
     </script>
 
     <!--[if lt IE 9]>
-    <script src="<?php $this->options->themeUrl('js/html5.min.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/respond.min.js'); ?>"></script>
+    <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
@@ -100,7 +97,7 @@
               <?php while($pages->next()): ?>
                   <li>  | <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a> </li>
               <?php endwhile; ?>
-                  <li>  | <a href='http://old.hsblogs.com' target='_blank' >旧版博客</a> </li>
+                  <li>  | <a href='http://hsblogs.com' target='_blank' >旧版博客</a> </li>
           <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
     		<li class="active"><?php $this->category(); ?></li>
     	<?php else: ?><!-- 页面为其他页时 -->
