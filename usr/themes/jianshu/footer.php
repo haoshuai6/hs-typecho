@@ -13,8 +13,9 @@
         <a href="<?php $this->options->commentsFeedUrl(); ?>"><?php _e('评论 RSS'); ?></a>
 	</p> 
     <p> &copy; <?php echo date('Y');?> <a href="<?php $this->options->siteUrl(); ?>" target="_blank"> <?php $this->options->title() ?> </a>
+	     / 由 <a href="http://typecho.org/" target="_blank"> Typecho </a> 强力驱动
         <?php if ($this->options->icpNum): ?>
-           / <a href="http://www.miitbeian.gov.cn/" target="blank"><?php $this->options->icpNum(); ?></a>
+           / <a href="http://www.beianbaba.com/icp/hsblogs.com" target="_blank"><?php $this->options->icpNum(); ?></a>
         <?php endif; ?>
 	</p> 
    </div> 
@@ -28,7 +29,7 @@
 <?php $this->footer(); ?>
 <script src="<?php $this->options->themeUrl('js/common.js'); ?>"></script>
 <?php if ($this->is('post')) :?>
-<script src="http://apps.bdimg.com/libs/prettify/r298/prettify.min.js"></script>
+<script src="//cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
 <script src="<?php $this->options->themeUrl('js/qrcode.js'); ?>"></script>
 <script>
 $(function(){
@@ -48,5 +49,27 @@ $(function(){
 window.isArchive = <?php if($this->is('index') || $this->is('archive')){echo 'true';}else{echo 'false';}?>;
 </script>
 <?php if ($this->options->siteStat): ?><?php $this->options->siteStat(); ?><?php endif; ?>
+<script>
+/*baidu*/
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+/*360*/
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?bb194fff20f7b76f1c579514055a5c59":"https://jspassport.ssl.qhimg.com/11.0.1.js?bb194fff20f7b76f1c579514055a5c59";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
 </body>
 </html>
