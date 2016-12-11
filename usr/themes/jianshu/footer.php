@@ -65,6 +65,16 @@ window.isArchive = <?php if($this->is('index') || $this->is('archive')){echo 'tr
 })();
 </script>
 <script>
+/*baidu_tongji*/
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?257e8a061e96727b1cac1867af334fa3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
 /*360*/
 (function(){
    var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?bb194fff20f7b76f1c579514055a5c59":"https://jspassport.ssl.qhimg.com/11.0.1.js?bb194fff20f7b76f1c579514055a5c59";

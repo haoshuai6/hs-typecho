@@ -33,8 +33,7 @@
 		   <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
 		   <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 		   <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
-		   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-
+<!--		   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>-->
 	    </div>
 
 		

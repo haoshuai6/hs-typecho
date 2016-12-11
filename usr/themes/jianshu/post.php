@@ -70,7 +70,9 @@
 			<p> 本博客，采用 <a href="https://creativecommons.org/licenses/by/3.0/cn/" target="_blank" style="font-weight:bold;">&lt;知识共享署名 3.0 中国大陆许可协议&gt;</a> 进行许可。
 				可自由转载、引用，但需署名作者且注明文章出处。
 			</p>
-			<p><i class="fa fa-rmb"></i> 打赏几块钱，让服务器君跑的更快些，谢谢大家！</p>
+			<p><i class="fa fa-rmb"></i> 打赏几块钱，让服务器君跑的更快些，谢谢大家！
+				<button class="btn s2 fr" id="alipay"><i class="fa fa-cny"> <?php _e('打赏支持');?></i></button>
+			</p>
 			<div class="post-donate-img">
 				<p>支付宝二维码</p>
 				<img src="<?php $this->options->themeUrl('img/alipay.png'); ?>">
@@ -93,8 +95,7 @@
 	   <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
 	   <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 	   <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
-	   <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-
+   <!--<a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>-->
 
 		</div>
         <div class="post-footer">
@@ -102,7 +103,7 @@
 	      <div class="author-ava"><img src="<?php if ($this->options->gravatar): ?><?php $this->options->gravatar() ?><?php else: ?><?php $this->options->themeUrl('img/avatar.png'); ?><?php endif; ?>" >
 	      </div>
 	      <p><?php $this->options->tips(); ?></p>
-	      <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
+	      <p itemprop="keywords" class="tags"><i class="fa fa-tags"></i><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
 
 		  <a class="gh-btn" id="gh-btn" href="https://github.com/haoshuai6" target="_blank">
 			<i class="fa fa-github fa-2x"></i> <span class="git-text">关注作者 @haoshuai6</span>
