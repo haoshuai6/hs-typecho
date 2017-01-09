@@ -1,0 +1,40 @@
+.toc-index {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    line-height: 160%;
+    font-size: 12px;
+    width: 100%;
+    position: relative;
+    z-index: 900;
+    margin: 0 0 10px 10px;
+
+}
+
+.toc-title {
+    margin: 0 0 3px 0;
+    padding: 0;
+    font-size: 130%;
+    font-weight: bold
+}
+
+.toc-toggle {
+    font-size: 9pt
+}
+
+.toc-index ul {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    list-style: none;
+}
+
+.toc-level3 {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+@media (min-width:768px){
+    .toc-index {
+        max-width: 30%;float: right;
+    }}

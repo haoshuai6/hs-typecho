@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /tyblog-admin/
+sitemap:https://hsblogs.com/baidu_sitemap.xml
