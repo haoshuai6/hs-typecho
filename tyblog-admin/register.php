@@ -15,6 +15,7 @@ include 'header.php';
 ?>
 <div class="typecho-login-wrap">
     <div class="typecho-login">
+        <div id="login-model">
         <h1><a href="http://www.hsblogs.com" class="i-logo">HSBLOG</a></h1>
         <form action="<?php $options->registerAction(); ?>" method="post" name="register" role="form">
             <p>
@@ -35,6 +36,7 @@ include 'header.php';
             &bull;
             <a href="<?php $options->adminUrl('login.php'); ?>"><?php _e('用户登录'); ?></a>
         </p>
+        </div>
     </div>
 </div>
 <?php 

@@ -29,7 +29,7 @@ include 'header.php';
                 <input type="hidden" name="referer" value="<?php echo htmlspecialchars($request->get('referer')); ?>" />
             </p>
             <p>
-                <label for="remember"><input type="checkbox" name="remember" class="checkbox" value="1" id="remember" /> <?php _e('下次自动登录'); ?></label>
+                <label for="remember"><input type="checkbox" name="remember"  class="checkbox"  value="1" id="remember" /> <?php _e('下次自动登录'); ?></label>
             </p>
         </form>
         
